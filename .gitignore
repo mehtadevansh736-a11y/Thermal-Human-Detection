@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Virtual envs
+venv/
+env/
+
+# Generated outputs — large, do not push
+outputs/
+video_outputs/
+*.avi
+
+# Ultralytics cache
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
