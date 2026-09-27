@@ -13,7 +13,13 @@ Human detection in thermal imagery using a custom-trained YOLO model. Works on �
 - Video and webcam inference via `test_video.py` with live display
 - Fake-thermal mode (`COLORMAP_INFERNO`) to test the model on normal RGB video
 - Annotated images and video saved automatically
-- Sample thermal images and videos included for quick testing
+- Sample detection results with bounding boxes in `demo_detections/`
+
+## 🖼️ Detection Results
+
+![Two people detected in thermal image](demo_detections/thermal_person_01.jpg)
+![Two people with raised arms detected](demo_detections/thermal_person_02.jpg)
+![Single person detected](demo_detections/thermal_person_03.jpg)
 
 ## 🧠 Model Details
 
@@ -39,7 +45,7 @@ Thermal-Human-Detection/
 ├── test_model.py       # Image / folder inference
 ├── test_video.py       # Video / webcam inference
 ├── model.pt            # Custom trained weights (HUMAN)
-├── test_images/        # Sample thermal images
+├── demo_detections/  # Sample thermal images with predicted boxes
 ├── videos/             # Sample thermal videos
 ├── requirements.txt
 ├── .gitignore
@@ -51,7 +57,7 @@ Thermal-Human-Detection/
 
 | Script | Usage |
 |--------|-------|
-| `test_model.py [image]` | No argument runs on `test_images/`, or pass a single image path |
+| `test_model.py [image]` | No argument runs on `demo_detections/`, or pass a single image path |
 | `test_video.py <source> [fake]` | `source` is a video file or `0` for webcam, `fake` enables fake-thermal conversion |
 
 ## 🚀 Installation
@@ -95,7 +101,7 @@ Test on the included sample images:
 
 ```powershell
 python test_model.py
-python test_model.py test_images/thermal_color3.png
+python test_model.py demo_detections/thermal_person_01.jpg
 ```
 
 Test on video:
@@ -124,9 +130,10 @@ Press Q in the video window to quit. Annotated video is written to `outputs/vide
 
 ```text
 Model: model.pt
-Source: test_images
-test_images\human_only1.jpg -> 1 HUMAN(s)
-  conf=0.87 box=[[x1, y1, x2, y2]]
+Source: demo_detections
+demo_detections\thermal_person_01.jpg -> 2 HUMAN(s)
+  conf=0.96 box=[[x1, y1, x2, y2]]
+  conf=0.93 box=[[x1, y1, x2, y2]]
 
 Saved to: outputs
 ```
@@ -159,6 +166,7 @@ Install with `pip install -r requirements.txt`. GPU users can install the CUDA b
 - [Ultralytics](https://github.com/ultralytics/ultralytics) for the YOLO framework
 - [PyTorch](https://pytorch.org/) for the backend
 - [OpenCV](https://opencv.org/) for video handling
+- Sample thermal photos by Böhringer Friedrich, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Thermal_images_of_people) (CC BY-SA 2.5)
 
 ## 📄 License
 

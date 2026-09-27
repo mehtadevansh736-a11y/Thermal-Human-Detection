@@ -7,7 +7,7 @@ MODEL = BASE / "model.pt"
 
 def main(image: str | None = None):
     model = YOLO(str(MODEL))
-    source = image or str(BASE / "test_images")
+    source = image or str(BASE / "demo_detections")
     print(f"Model: {MODEL}")
     print(f"Source: {source}")
     results = model.predict(
