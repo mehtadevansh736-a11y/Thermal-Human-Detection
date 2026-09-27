@@ -166,7 +166,7 @@ Install with `pip install -r requirements.txt`. GPU users can install the CUDA b
 - [Ultralytics](https://github.com/ultralytics/ultralytics) for the YOLO framework
 - [PyTorch](https://pytorch.org/) for the backend
 - [OpenCV](https://opencv.org/) for video handling
-- Sample thermal photos by Böhringer Friedrich, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Thermal_images_of_people) (CC BY-SA 2.5)
+- Sample thermal photos 01 and 03 by Böhringer Friedrich, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Thermal_images_of_people) (CC BY-SA 2.5); sample photo 02 by David Skinner, via Wikimedia Commons (CC BY 2.0)
 
 ## 📄 License
 
